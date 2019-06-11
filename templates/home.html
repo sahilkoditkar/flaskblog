@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+    <h1>Welcome to MyFlaskAPP</h1>
+    <p>Built on the python flask</p>
+    {% if 'email' in session %}
+    <a href="/logout"><button type="button" class="btn btn-primary">Logout</button></a>
+    {% else %}
+    <a href="/login"><button type="button" class="btn btn-primary">Login</button></a>
+    <a href="/signup"><button type="button" class="btn btn-success">Signup</button></a>
+    {% endif %}
+</div>
+
+{% endblock %}

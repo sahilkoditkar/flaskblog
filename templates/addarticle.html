@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="jumbotron">
+    <form action="/newarticle" method="POST">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+        </div>
+        <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Article</button>
+    </form>
+    <div class="alert"></div>
+</div>
+
+{% endblock %}
