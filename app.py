@@ -70,7 +70,7 @@ def articles():
 @app.route('/article/<id>/')
 def article(id):
     article = Post.get_posts({'_id': ObjectId(id)})
-    return render_template('articles.html', Articles = article)
+    return render_template('article.html', Article = article)
 
 @app.route('/addarticle')
 def addarticle():

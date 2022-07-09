@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    {% for article in Article %}
+
+    <h2>{{article.title}}</h2>
+    <hr>
+    <p>{{article.content}}</p>
+    <p>-Posted by {{article.author}} on {{article.created_date}}</p>
+    <hr>
+
+    {% endfor %}
+
+{% endblock %}
